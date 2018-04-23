@@ -4,4 +4,9 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def contact_email
+    ContactMailer.send_contact_email
+    render :contact
+  end
 end
