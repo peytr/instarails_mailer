@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  before_action :authenticate_user!, except: [:home]
+
   def home
   end
 
@@ -6,7 +9,19 @@ class PagesController < ApplicationController
   end
 
   def contact_email
-    ContactMailer.send_contact_email
-    render :contact
+    user_info = {
+      user: current_user, 
+      name: email_params[:name],
+      message: email_params[:message],
+    }
+    ContactMailer.send_contact_email(user_info).deliver_now
+    render :home
   end
+end
+
+
+private
+
+def email_params
+  params.require(:contact).permit(:name, :message)
 end
