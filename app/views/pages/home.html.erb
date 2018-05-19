@@ -1,2 +1,17 @@
-<h1>Pages#home - Message has been sent</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h3>Instarails Project</h3>
+<large class="text-muted">Coder Academy - Term 2</large>
+<br>
+<br>
+<p>This is my rails mailgun gem test app as demonstrated in term two of the CoderAcademy bootcamp.</p>
+<div class="instructions">
+    <p class="font-weight-bold">Instructions</p>
+    <ul>
+        <li>Click the Contact button.</li>
+        <li>Or the Send Messge link at the top right of the navbar.</li>
+        <li>Fill out the contact form.</li>
+        <li>Click Submit to send your message.</li>
+        <li>I will recieve an email with your message.</li>
+    </ul>
+    <br>
+    <%= link_to  "Contact", contact_path, class: "btn btn-success" %>
+</div>

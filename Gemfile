@@ -6,6 +6,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'mailgun-ruby', '~> 1.1', '>= 1.1.9'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 
+# boostrap
+gem 'bootstrap', '~> 4.1.1'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'jquery-rails'
+
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
